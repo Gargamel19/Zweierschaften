@@ -1,5 +1,4 @@
-
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 using namespace std;
 #include <string>
@@ -12,38 +11,27 @@ using namespace std;
 
 int main(void) {
 
-
-
 	ifstream namenliste("C:\\Users\\Ferdinand\\Desktop\\Zweierschaften\\res\\teilnemer.txt", ios::in);
-	
-	
-	
 	string zeichenkette;
-	string namen[36];
+	string namen[38];
 	string output;
 	string f;
-	int namenID[36];
+	int namenID[38];
 	int zaehler = 0;
 	int seed;
 
 	cout << "bitte geben sie einen parameter ein!" << endl;
 	cin >> seed;
 
-	
-		
-
 	while (getline(namenliste, zeichenkette))
 	{
-
 		int a;
 		string b;
 
 		for (int d = 0; d < zeichenkette.size(); d++)
 		{
-
 			stringstream datenstrom(zeichenkette);
 			datenstrom >> a >> b;
-
 		}
 
 		namenID[zaehler] = a;
@@ -54,8 +42,7 @@ int main(void) {
 		zaehler++;
 	}
 
-
-	int zugeordnet[zaehler];
+	int zugeordnet[38];
 
 	for(int i = 0; i < zaehler; i++){
 
@@ -63,7 +50,7 @@ int main(void) {
 	
 	}
 
-	int random[zaehler];
+	int random[38];
 
 	srand(seed);
 
@@ -158,6 +145,7 @@ int main(void) {
 	
 	return(0);
 }
+
 
 
 
